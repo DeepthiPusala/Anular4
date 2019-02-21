@@ -1,0 +1,13 @@
+[ 
+    { "id": 1, "name": "Angular Connect", "date": "9/26/2036", "time" : "10:00 am","price": 1000,"imageUrl": "/assets/images/angularconnect-shield.png",
+     "location" : { "trainingRoom": "Harvard", "building": "Campus", "city": "Hyderabad"}
+    },
+    { "id": 2, "name": "ng-nl", "date": "4/15/2037", "time" : "9:00 am","price": 900,"imageUrl": "/assets/images/ng-nl.png",
+        "location" : { "trainingRoom": "Galileo", "building": "Campus", "city": "Hyderabad"}},
+    { "id": 3, "name": "ng-conf 2037", "date": "9/22/2037", "time" : "11:00 am","price": 2000,"imageUrl": "/assets/images/ng-conf.png",
+        "location" : { "trainingRoom": "Oxford", "building": "Campus", "city": "Hyderabad"}},
+	{ "id": 4, "name": "UN Angular Summit", "date": "8/21/2030", "time" : "9:00 am","price": 3000,"imageUrl": "/assets/images/basic-shield.png",
+        "location" : { "trainingRoom": "Velocity", "building": "Campus", "city": "Hyderabad"}},
+	{ "id": 5, "name": "ng-vegas", "date": "2/27/2025", "time" : "12:00 am","price": 1000,"imageUrl": "/assets/images/ng-vegas.png",
+        "location" : { "trainingRoom": "Harvard", "building": "Campus", "city": "Hyderabad"}}
+]

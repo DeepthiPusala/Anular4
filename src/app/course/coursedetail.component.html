@@ -1,0 +1,30 @@
+<div class="container">
+  <img [src]="courses?.imageUrl" [alt]="courses?.name" class="course-image">
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>{{courses?.name}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div><strong>Date:</strong> {{courses?.date}}</div>
+      <div><strong>Time:</strong> {{courses?.time}}</div>
+      <div><strong>Price:</strong> ${{courses?.price}}</div>
+    </div>
+    <div class="col-md-6" *ngIf="courses?.location">
+      <address>
+        <strong>Address:</strong><br />
+        {{courses?.location?.trainingRoom}},<br />
+        {{courses?.location?.building}}, {{courses?.location?.city}}
+      </address>
+    </div>
+    <div class="col-md-6" *ngIf="course?.onlineURL">
+      <address>
+        <strong>Online URL:</strong><br />
+        {{courses?.onlineURL}}<br />
+      </address>
+    </div>
+  </div>
+</div>

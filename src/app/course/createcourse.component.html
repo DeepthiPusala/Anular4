@@ -1,0 +1,50 @@
+<h1>New Course</h1>
+<hr>
+<div class="col-md-6">
+  <form #newCourseForm="ngForm" (ngSubmit)="saveCourse(newCourseForm.value)" autocomplete="off" novalidate>
+    <div class="form-group" [ngClass]="{'error': newCourseForm.controls.name?.invalid && newCourseForm.controls.name?.touched}">
+      <label for="CourseName">Course Name:</label>
+      <em *ngIf="newCourseForm.controls.name?.invalid && (newCourseForm.controls.name?.touched)">Required</em>
+      <input (ngModel)="name" name="name" required id="name" type="text" class="form-control" placeholder="Name of your Course..." />
+    </div>
+    <div class="form-group" [ngClass]="{'error': newCourseForm.controls.date?.invalid && newCourseForm.controls.date?.touched}">
+      <label for="CourseDate">Course Date:</label>
+      <em *ngIf="newCourseForm.controls.date?.invalid && (newCourseForm.controls.date?.touched)">Required</em>
+      <input (ngModel)="date" name="date" required id="CourseDate" type="text" class="form-control" placeholder="format (mm/dd/yyyy)..." />
+    </div>
+    <div class="form-group" [ngClass]="{'error': newCourseForm.controls.time?.invalid && newCourseForm.controls.time?.touched}">
+      <label for="CourseTime">Course Time:</label>
+      <em *ngIf="newCourseForm.controls.time?.invalid && (newCourseForm.controls.time?.touched)">Required</em>
+      <input (ngModel)="time" name="time" required id="CourseTime" type="text" class="form-control" placeholder="start and end time..." />
+    </div>
+    <div class="form-group" [ngClass]="{'error': newCourseForm.controls.price?.invalid && newCourseForm.controls.price?.touched}">
+      <label for="CoursePrice">Course Price:</label>
+      <em *ngIf="newCourseForm.controls.price?.invalid && (newCourseForm.controls.price?.touched)">Required</em>
+      <input (ngModel)="price" name="price" required id="CoursePrice" type="text" type="number" class="form-control" placeholder="Course price..." />
+    </div>
+    
+    <div ngModelGroup="location">
+    <div class="form-group">
+      <label for="trainingRoom">Location:</label>
+      <input (ngModel)="trainingRoom" name="trainingRoom" required id="trainingRoom" type="text" class="form-control" placeholder="Training Room ..." />
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <input (ngModel)="building" name="building" required  id="building" type="text" class="form-control" placeholder="Building..." />
+      </div>
+      <div class="col-md-6" >
+        <input (ngModel)="city" name="city" required id="city" type="text" class="form-control" placeholder="City..." />
+      </div>
+    </div>
+  </div>
+    <div class="form-group">
+      <label for="onlineUrl">Online Url:</label>
+      <input (ngModel)="onlineurl" name="onlineurl"  required id="onlineurl" type="text" class="form-control" placeholder="Online Url..." />
+    </div>
+    
+  
+
+    <button type="submit"  [disabled]="newCourseForm.invalid"class="btn btn-primary">Save</button>
+    <button type="button"  class="btn btn-default" (click)="cancel()">Cancel</button>
+  </form>
+</div>
